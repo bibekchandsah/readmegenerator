@@ -18,7 +18,7 @@
 - Export Options: Generate and save README files locally or directly add them to a GitHub repository.
 
 ## Feedback
- If you have any feedback, please reach out to us at [Feedback](bibekchandsah.com.np/feedback)
+ If you have any feedback, please reach out to us at [Feedback](https://bibekchandsah.com.np/feedback)
 
 ## Contact
 📧 reach me [bibeksha48@gmail.com](mailto:bibeksha48@gmail.com)
