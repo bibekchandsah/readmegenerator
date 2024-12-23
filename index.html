@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>README Generator</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ReadMe Generator" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- Provide a brief description of your page -->
+    <meta name="description"
+        content="ReadMe generator allows users to create, update, and organize their ReadMe files. Users can set their details, social links, and other information.">
+    <meta name="search.description"
+        content="bibekchandsah bcs bibekchandsah bibeksha web-development front-end development">
+    <!-- Specify keywords related to your content -->
+    <meta name="keywords"
+        content="readme, readme generator, readme generator, bibeksha, bibekchandsah, bibekchandsah, web-development, resources, bibeksha10550 bibekchandsah">
+    <!-- Define the author of the page -->
+    <meta name="author" content="Bibek Chand Sha">
+    <!-- Define the language of the content -->
+    <meta name="language" content="en">
+    <!-- Canonical URL to specify the preferred version of the page -->
+    <link rel="canonical" href="https://bibekchandsah.github.io/bibekchandsah">
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="ReamMe Generator">
+    <meta property="og:description"
+        content="ReadMe generator allows users to create, update, and organize their ReadMe files. Users can set their details, social links, and other information.">
+    <meta property="og:image" content="https://bibekchandsah.github.io/bibekchandsah/assets/images/BCS_Full_Share.png">
+    <meta property="og:url" content="https://bibekchandsah.github.io/bibekchandsah">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:site" content="@YourTwitterHandle"> Replace with your Twitter handle  -->
+    <meta name="twitter:title" content="To-Do List">
+    <meta name="twitter:description"
+        content="ReadMe generator allows users to create, update, and organize their ReadMe files. Users can set their details, social links, and other information.">
+    <meta name="twitter:image" content="https://bibekchandsah.github.io/bibekchandsah/assets/images/BCS_Full_Share.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <!-- Marked JS -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Markdown Lint JS -->
+    <script src="https://cdn.jsdelivr.net/npm/markdownlint/dist/markdownlint.min.js"></script>
+</head>
+
+<body class="mb-0">
+    <!-- heading -->
+    <h2 class="text-center mt-2"><b>ReadMe Generator</b></h2>
+    <hr>
+
+    <div class="row">
+        <!-- name with option -->
+        <div class="col-md-3 themed-grid-col">
+            <h4 class="text-center" id="enterDetails">Enter Details</h4>
+            <div class="userInputDetails">
+                <!-- auto check -->
+                <div class="form-check form-switch form-check-reverse">
+                    <input class="form-check-input" type="checkbox" id="autocheckbox">
+                    <label class="form-check-label" for="autocheckbox">Enable auto check checkbox</label>
+                </div>
+                <!-- your Name -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeYourName" checked>
+                    <label class="form-check-label" for="includeYourName">
+                        Your Name
+                    </label> <label class="visually-hidden" for="yourName">Your Name</label>
+                    <input type="text" class="form-control" id="yourName" placeholder="Bibek Chand Sah">
+                </div>
+                <!-- GitHub UserName -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeGithubUsername" checked>
+                    <label class="form-check-label" for="includeGithubUsername">
+                        GitHub User Name
+                    </label> <label class="visually-hidden" for="githubUsername">GitHub User Name</label>
+                    <input type="text" class="form-control" id="githubUsername" placeholder="bibekchandsah">
+                </div>
+                <!-- GItHub Repository Name -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeGithubrepositoryname">
+                    <label class="form-check-label" for="includeGithubrepositoryname">
+                        GitHub Repository Name
+                    </label> <label class="visually-hidden" for="githubrepositoryname">GitHub Repository Name</label>
+                    <input type="text" class="form-control" id="githubrepositoryname" placeholder="readmegenerator">
+                </div>
+                <!-- Website Url -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeWebsiteUrl">
+                    <label class="form-check-label" for="includeWebsiteUrl">
+                        Website Url
+                    </label> <label class="visually-hidden" for="websiteUrl">Website Url</label>
+                    <input type="text" class="form-control" id="websiteUrl"
+                        placeholder="bibekchandsah.github.io/readmegenerator">
+                </div>
+                <!-- Features -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeFeatures">
+                    <label class="form-check-label" for="includeFeatures">
+                        Features
+                    </label> <label class="visually-hidden" for="features">Feature</label>
+                    <textarea type="text" class="form-control" id="features"
+                        placeholder="Light/dark mode toggle, Live previews">Light/dark mode toggle
+    Live previews</textarea>
+                </div>
+                <!-- About Me -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeAboutMe">
+                    <label class="form-check-label" for="includeAboutMe">
+                        About Me
+                    </label> <label class="visually-hidden" for="aboutMe">About Me</label>
+                    <textarea type="text" class="form-control" id="aboutMe"
+                        placeholder="A passionate frontend developer"></textarea>
+                </div>
+                <!-- Work -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeWork">
+                    <label class="form-check-label" for="includeWork">
+                        Work
+                    </label> <label class="visually-hidden" for="work">Work</label>
+                    <textarea type="text" class="form-control" id="work"
+                        placeholder="🔭 I’m currently working on Microsoft, 👯 I’m looking to collaborate on Projects">🔭 I’m currently working on Microsoft
+    👯 I’m looking to collaborate on Projects</textarea>
+                </div>
+                <!--Feedback Url  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeFeedbackUrl">
+                    <label class="form-check-label" for="includeFeedbackUrl">
+                        Feedback Url
+                    </label> <label class="visually-hidden" for="feedbackUrl">Feedback Url</label>
+                    <input type="text" class="form-control" id="feedbackUrl"
+                        placeholder="bibekchandsah.com.np/feedback">
+                </div>
+                <!-- Email -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeContactEmail">
+                    <label class="form-check-label" for="includeContactEmail">
+                        Contact Email
+                    </label> <label class="visually-hidden" for="contactEmail">Contact Email</label>
+                    <input type="text" class="form-control" id="contactEmail" placeholder="bibeksha48@gmail.com">
+                </div>
+                <!-- Logo Url -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeLogoUrl">
+                    <label class="form-check-label" for="includeLogoUrl">
+                        Logo Url
+                    </label> <label class="visually-hidden" for="logoUrl">Logo Url</label>
+                    <input type="text" class="form-control" id="logoUrl"
+                        placeholder="bibekchandsah.github.io/readmegenerator/favicon/apple-touch-icon">
+                </div>
+                <!-- Page Demo Url -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="inlcudePageDemoUrl">
+                    <label class="form-check-label" for="inlcudePageDemoUrl">
+                        Page Demo Url
+                    </label> <label class="visually-hidden" for="pageDemoUrl">Page Demo Url</label>
+                    <input type="text" class="form-control" id="pageDemoUrl"
+                        placeholder="bibekchandsah.github.io/readmegenerator.jpg">
+                </div>
+                <!-- Skills | Languages -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeSkills">
+                    <label class="form-check-label" for="includeSkills">
+                        Skills | Languages
+                    </label> <label class="visually-hidden" for="skills">Skills | Languages</label>
+                    <textarea type="text" class="form-control" id="skills" placeholder="C, C++, Python">C
+    C++
+                    </textarea>
+                </div>
+                <!-- Social Links -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeSocialLinks">
+                    <label class="form-check-label" for="includeSocialLinks">
+                        Social Links (JSON Format)
+                    </label> <label class="visually-hidden" for="socialLinks">Social Links (JSON Format)</label>
+                    <textarea type="text" class="form-control" id="socialLinks"
+                        placeholder='{"facebook": "https://fb.com/bibek1432", "instagram": "https://instagram.com/bibek1432"}'>{"facebook": "https://facebook.com/bibek1432", "instagram": "https://instagram.com/bibek1432"}</textarea>
+                </div>
+                <!-- GitHub Visitor count -->
+                <h4>GitHub badges</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="includeVisitorCount">
+                    <label class="form-check-label" for="includeVisitorCount">
+                        Display Visitor Count
+                    </label> <label class="visually-hidden" for="visitorCount">Display Visitor Count</label>
+                    <input type="text" class="form-control" id="visitorCount" placeholder="readmegenerator">
+                </div>
+                <!-- GitHub trophy -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="githubTrophy">
+                    <label class="form-check-label" for="githubTrophy">
+                        Display GitHub trophy
+                    </label>
+                </div>
+                <!-- GitHub Profile Stats Card -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="githubProfileStatsCard">
+                    <label class="form-check-label" for="githubProfileStatsCard">
+                        Display GitHub Profile Stats Card
+                    </label>
+                </div>
+                <!-- GitHub Top Skills -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="githubTopSkills">
+                    <label class="form-check-label" for="githubTopSkills">
+                        Display GitHub Top Skills
+                    </label>
+                </div>
+                <!-- GitHub Streak Stats -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="githubStreakStats">
+                    <label class="form-check-label" for="githubStreakStats">
+                        Display GitHub Streak Stats
+                    </label>
+                </div>
+                <!-- GitHub Twitter badge -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="githubTwitterBadge">
+                    <label class="form-check-label" for="githubTwitterBadge">
+                        Display GitHub Twitter Badge
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- markdown editor-->
+        <div class="col-md-4 themed-grid-col">
+            <!-- Editor | Code -->
+            <div class="code-preview-container" id="editor">
+                <div class="d-flex justify-content-between"><h4 class="text-center" id="editorCode">Editor | Code</h4><span class="copyFeedback"></span><i class="bi bi-copy copycode"></i></div>
+                <label class="form-check-label visually-hidden" for="socialLinks">
+                    Editor | Code
+                </label>
+                <textarea type="text" class="form-control markdown-code" id="code-view"></textarea>
+            </div>
+        </div>
+        <!-- markdown preview -->
+        <div class="col-md-5 themed-grid-col">
+            <!-- Markdown Code preview -->
+            <h4 class="text-center" id="markdownPreview">Markdown Preview</h4>
+            <div class="live-preview" id="preview">
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown multiMenu">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                class="bi bi-grid-fill"></i>
+        </button>
+        <ul class="dropdown-menu multiMenuList">
+            <!-- dark mode -->
+            <li><a class="dropdown-item">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="colorModeSelect">
+                        <label class="form-check-label" for="colorModeSelect">Dark Mode</label>
+                    </div>
+                </a>
+            </li>
+            <!-- Generate Preview -->
+            <li><button class="dropdown-item btn btn-outline-primary" id="generate-preview"><i
+                        class="bi bi-play"></i>Generate Preview</button></li>
+            <!-- Download ReadMe -->
+            <li><button class="dropdown-item btn btn-outline-primary" id="download-readme"><i
+                        class="bi bi-download"></i>Download ReadMe</button></li>
+            <!-- GOTO Enter Details -->
+            <li><a class="dropdown-item" href="#enterDetails" href="#autocheckbox"><i class="bi bi-list-task"></i>Enter
+                    Detalis</a></li>
+            <!-- GOTO Editor | Code -->
+            <li><a class="dropdown-item" href="#editorCode"><i class="bi bi-pencil-square"></i>Edit | Code</a></li>
+            <!-- GOTO Markdown Preview -->
+            <li><a class="dropdown-item" href="#markdownPreview"><i class="bi bi-credit-card-2-front"></i>Preview</a></li>
+            <!-- Export Data -->
+            <li><button class="dropdown-item btn btn-outline-primary" id="export-json"><i
+                        class="bi bi-box-arrow-up-right"></i>Export Data</button>
+            </li>
+            <!-- Import Data -->
+            <li><button class="dropdown-item btn btn-outline-primary" id="import-json"><i
+                        class="bi bi-box-arrow-in-down-right"></i>Import Data</button><input type="file" id="file-input"
+                    accept=".json" style="display:none;"></li>
+            <!-- Back to top -->
+            <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-up"></i>Back to top</a></li>
+        </ul>
+    </div>
+
+    <!-- Lint Errors -->
+    <div id="lint-errors" class="lint-errors"></div>
+
+    <!-- Developer -->
+    <div class="developer">
+        <p class="text-center fw-bolder">Developed by 💗 <a href="https://bibekchandsah.com.np" target="_blank">Bibek Chand Sah</a></p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
